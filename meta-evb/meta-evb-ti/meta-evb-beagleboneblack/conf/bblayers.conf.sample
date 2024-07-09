@@ -13,12 +13,13 @@ BBLAYERS ?= " \
   ##OEROOT##/meta-openembedded/meta-networking \
   ##OEROOT##/meta-openembedded/meta-python \
   \
-  ##OEROOT##/../../meta-arm/meta-arm \
-  ##OEROOT##/../../meta-arm/meta-arm-toolchain \
-  ##OEROOT##/../../meta-ti/meta-ti-bsp \
+  ##OEROOT##/../meta-arm/meta-arm \
+  ##OEROOT##/../meta-arm/meta-arm-toolchain \
+  ##OEROOT##/../meta-ti/meta-ti-bsp \
   \
   ##OEROOT##/meta-phosphor \
   \
-  ##OEROOT##/meta-evb-ti \
-  ##OEROOT##/meta-evb-ti/meta-evb-beagleboneblack \
+  ##OEROOT##/meta-evb \
+  ##OEROOT##/meta-evb/meta-evb-ti \
+  ##OEROOT##/meta-evb/meta-evb-ti/meta-evb-beagleboneblack \
 "
