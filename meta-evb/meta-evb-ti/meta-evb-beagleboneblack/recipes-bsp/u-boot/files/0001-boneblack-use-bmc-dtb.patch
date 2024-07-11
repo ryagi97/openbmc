@@ -1,0 +1,25 @@
+From 73139ad8f1a2e89303d64bf1ae34dd9f34c71c30 Mon Sep 17 00:00:00 2001
+From: ryagi <ryan@smartcow.ai>
+Date: Tue, 19 Mar 2024 18:16:14 +0000
+Subject: [PATCH] boneblack use bmc dtb
+
+Signed-off-by: ryagi <ryan@smartcow.ai>
+---
+ include/configs/am335x_evm.h | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/include/configs/am335x_evm.h b/include/configs/am335x_evm.h
+index 5b47778517..4ada97f649 100644
+--- a/include/configs/am335x_evm.h
++++ b/include/configs/am335x_evm.h
+@@ -117,7 +117,7 @@
+ 		"if test $board_name = A335BONE; then " \
+ 			"setenv fdtfile am335x-bone.dtb; fi; " \
+ 		"if test $board_name = A335BNLT; then " \
+-			"setenv fdtfile am335x-boneblack.dtb; fi; " \
++			"setenv fdtfile am335x-boneblackbmc.dtb; fi; " \
+ 		"if test $board_name = A335PBGL; then " \
+ 			"setenv fdtfile am335x-pocketbeagle.dtb; fi; " \
+ 		"if test $board_name = BBBW; then " \
+-- 
+2.34.1
