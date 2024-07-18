@@ -1,0 +1,26 @@
+From d4a765e608c125056b44f4619ce7985c130ab5ae Mon Sep 17 00:00:00 2001
+From: ryagi <ryan@smartcow.ai>
+Date: Mon, 15 Jul 2024 12:42:17 +0000
+Subject: [PATCH] set udevrules for beaglebonebmc
+
+Signed-off-by: ryagi <ryan@smartcow.ai>
+---
+ conf/80-obmc-console-uart.rules.in | 8 ++------
+ 1 file changed, 2 insertions(+), 6 deletions(-)
+
+diff --git a/conf/80-obmc-console-uart.rules.in b/conf/80-obmc-console-uart.rules.in
+index 7754dc8..b52e99f 100644
+--- a/conf/80-obmc-console-uart.rules.in
++++ b/conf/80-obmc-console-uart.rules.in
+@@ -1,6 +1,2 @@
+-SUBSYSTEM=="tty", ATTRS{iomem_base}=="0x1E787000", ENV{SYSTEMD_WANTS}="obmc-console@ttyVUART0" SYMLINK+="ttyVUART0", TAG+="systemd"
+-SUBSYSTEM=="tty", ATTRS{iomem_base}=="0x1E788000", ENV{SYSTEMD_WANTS}="obmc-console@ttyVUART1" SYMLINK+="ttyVUART1", TAG+="systemd"
+-SUBSYSTEM=="tty", ATTRS{iomem_base}=="0x1E783000", ENV{SYSTEMD_WANTS}="obmc-console@ttyS0", TAG+="systemd"
+-SUBSYSTEM=="tty", ATTRS{iomem_base}=="0x1E78D000", ENV{SYSTEMD_WANTS}="obmc-console@ttyS1", TAG+="systemd"
+-SUBSYSTEM=="tty", ATTRS{iomem_base}=="0x1E78E000", ENV{SYSTEMD_WANTS}="obmc-console@ttyS2", TAG+="systemd"
+-SUBSYSTEM=="tty", ATTRS{iomem_base}=="0x1E78F000", ENV{SYSTEMD_WANTS}="obmc-console@ttyS3", TAG+="systemd"
++SUBSYSTEM=="tty", KERNEL=="ttyS1", ENV{SYSTEMD_WANTS}="obmc-console@ttyS1", TAG+="systemd"
++
+-- 
+2.34.1
+

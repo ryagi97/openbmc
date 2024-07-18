@@ -1,5 +1,5 @@
 # 6.1.69 version for 32-bit
-SRCREV:armv7a = "3c00e71b9b82eebdb9b99745bfac5335b6779ac1"
+SRCREV:armv7a = "41fa8e1a20ade4009575606434124f1e45a51aa7"
 PV:armv7a = "6.1.69+git${SRCPV}"
 BRANCH:armv7a = "v6.1.69-ti-r22"
 

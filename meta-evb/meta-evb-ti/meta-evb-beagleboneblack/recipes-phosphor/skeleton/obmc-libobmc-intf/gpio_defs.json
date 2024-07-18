@@ -1,0 +1,38 @@
+{
+    "gpio_configs": {
+
+        "power_config": {
+            "power_good_in": "SYS_PWROK_BUFF",
+            "power_up_outs": [
+                { "name": "SOFTWARE_PGOOD", "polarity": true},
+                { "name": "BMC_POWER_UP", "polarity": true}
+            ],
+            "reset_outs": [
+            ]
+        }
+    },
+
+    "gpio_definitions": [
+        {
+            // P9_13
+            // gpio3 line 31 => num =  3*32 + 31 = 127
+            "name": "SOFTWARE_PGOOD",
+            "num": 127,
+            "direction": "out"
+        },
+        {
+            // P9_11
+            // gpio3 line 30 => num =  3*32 + 30 = 126
+            "name": "BMC_POWER_UP",
+            "num": 126,
+            "direction": "out"
+        },
+        {
+            // P9_12
+            // gpio0 line 28 => num =  0*32 + 28 = 28
+            "name": "SYS_PWROK_BUFF",
+            "num": 28,
+            "direction": "in"
+        }
+    ]
+}
